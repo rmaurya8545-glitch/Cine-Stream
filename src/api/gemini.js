@@ -1,4 +1,4 @@
- const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY; // apni AQ. wali key yahan rakho
+ const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 export const getMoodBasedMovie = async (moodText) => {
   const res = await fetch(
