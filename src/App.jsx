@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { getPopularMovies, searchMovies} from "./api/tmdb";
+import Posts from "./components/Posts";
 import MovieGrid from "./components/MovieGrid";
 import SearchBar from "./components/SearchBar";
 import Navbar from "./components/Navbar";
@@ -96,8 +97,11 @@ function App(){
         <div className="bg-white dark:bg-gray-900 min-h-screen transition-colors">
         <Navbar onSearch={handleSearch} />
 
+        <Posts />
+
             {/* Hero/Banner section */}
-            <div className="px-4 py-16 sm:py-20 text-center bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-900 dark:via-purple-900 dark:to-gray-900">
+            <div className="px-4 py-16 sm:py-20 text-center bg-linear-to-r from-indigo-500 
+            via-purple-500 to-pink-500 dark:from-indigo-900 dark:via-purple-900 dark:to-gray-900">
                 <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
                     🎬 Discover Your Next Favorite Movie
                 </h2>
@@ -122,11 +126,13 @@ function App(){
   </div>
 )}
             <MovieGrid
+                
                 movies={movies}
                 favorites={favorites}
                 onToggleFavorite={toggleFavorite}
                 lastMovieRef={lastMovieRef}
             />
+            
             {loading && (
                 <p className="text-gray-900 dark:text-white text-center py-4">
                     Loading more movies...
