@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { getPopularMovies, searchMovies} from "./api/tmdb";
+import Chat from "./components/Chat";
 import Posts from "./components/Posts";
 import MovieGrid from "./components/MovieGrid";
 import SearchBar from "./components/SearchBar";
@@ -96,6 +97,8 @@ function App(){
     return (
         <div className="bg-white dark:bg-gray-900 min-h-screen transition-colors">
         <Navbar onSearch={handleSearch} />
+
+        <Chat />
 
         <Posts />
 
