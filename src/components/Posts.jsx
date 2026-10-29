@@ -60,7 +60,13 @@ function Posts() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <section style={{ color: "white", padding: "1rem" }}>
+    <section style={{ 
+        background: "rgba(15,23,42,0.9)", 
+        color: "white", 
+        padding: "1rem",
+        margin:"1rem",
+        borderRadius:"12px",
+      }}>
       <h2>Posts</h2>
 
       <form onSubmit={handleSubmit}>

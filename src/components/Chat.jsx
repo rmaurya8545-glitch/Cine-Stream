@@ -64,7 +64,13 @@ function Chat() {
 
   if (!username) {
     return (
-      <section style={{ color: "white", padding: "1rem" }}>
+      <section style={{ 
+        background: "rgba(15,23,42,0.9)", 
+        color: "white", 
+        padding: "1rem",
+        margin:"1rem",
+        borderRadius:"12px",
+      }}>
         <h2>Live Chat</h2>
         <form onSubmit={joinChat}>
           <input
@@ -79,7 +85,13 @@ function Chat() {
   }
 
   return (
-    <section style={{ color: "white", padding: "1rem" }}>
+    <section style={{ 
+        background: "rgba(15,23,42,0.9)", 
+        color: "white", 
+        padding: "1rem",
+        margin:"1rem",
+        borderRadius:"12px",
+      }}>
       <h2>Live Chat</h2>
 
       <div style={{ marginBottom: "0.5rem" }}>
